@@ -1,0 +1,88 @@
+<img src="https://cdn.prod.website-files.com/677c400686e724409a5a7409/6790ad949cf622dc8dcd9fe4_nextwork-logo-leather.svg" alt="NextWork" width="300" />
+
+# Launch a Kubernetes Cluster
+
+**Project Link:** [View Project](http://learn.nextwork.org/projects/aws-compute-eks1)
+
+**Author:** Cody Chinothai  
+**Email:** cchinothai@gmail.com
+
+---
+
+## Launch a Kubernetes Cluster
+
+![Image](http://learn.nextwork.org/enthusiastic_turquoise_radiant_monstera_deliciosa/uploads/aws-compute-eks1_e5f6g7h8)
+
+---
+
+## Introducing Today's Project!
+
+Key Learnings
+1. Launch and connect to an EC2 instance.
+2. Create a Kubernetes cluster.
+3.  Monitor cluster creation with CloudFormation.
+4.  Access your cluster using an IAM access entry.
+5.  Test the resilience of our Kubernetes cluster.
+
+### What is Amazon EKS?
+
+### One thing I didn't expect
+
+### This project took me...
+
+---
+
+## What is Kubernetes?
+
+Kubernetes is a container orchestration platform that we can use to ensure our containerized applications are running and can dynamically scale based on traffic. 
+
+In this command: 
+$eksctl create cluster \
+--name nextwork-eks-cluster \
+--nodegroup-name nextwork-nodegroup \
+--node-type t3.micro \
+--nodes 3 \
+--nodes-min 1 \
+--nodes-max 3 \
+--version 1.33 \
+--region us-east-2
+
+We specify a node range of 1 through 3 to provide basic scaling for experimental purposes. 
+
+I used eksctl to define a new cluster and a node group with each node running on t3.micro instances and using Kubernetes version 1.31
+
+I initially ran into two errors while using eksctl. The first one was because we didn't have eksctl properly installed, and the other because we didn't set proper permissions for ec2 to execute our commands. 
+
+![Image](http://learn.nextwork.org/enthusiastic_turquoise_radiant_monstera_deliciosa/uploads/aws-compute-eks1_ff9bfc221)
+
+---
+
+## eksctl and CloudFormation
+
+CloudFormation helped create my EKS cluster because it generates the infrastructure as code specifying the resources needed to create the cluster,  including VPCs, security groups, route tables, etc. It created new VPC resources because it requires settings specific to creating a kubernetes cluster. 
+
+There was also a second CloudFormation stack for the node groups. The difference between a cluster and node groups is:
+ - the cluster represents the entier kubernetes environment
+- the node groups are a component of your cluster that are grouped together to manage instance type and resource limits. 
+
+It is better design to have separate independent stacks for the cluster and node group so that you can isolate issues better when troubleshooting, especially if one half fials 
+
+![Image](http://learn.nextwork.org/enthusiastic_turquoise_radiant_monstera_deliciosa/uploads/aws-compute-eks1_w3e4r5t6)
+
+---
+
+## The EKS console
+
+I had to create an IAM access entry in order to map our IAM role to Kubernete's RBAC role. An access entry is like a handshake protocol that connects AWS and Kubernets.  I set it up by creating and access entry point linking our user IAM role and attaching the AmazonEKSClusterAdminPolicy
+
+It took. ~30 minutes to create my cluster. 
+
+![Image](http://learn.nextwork.org/enthusiastic_turquoise_radiant_monstera_deliciosa/uploads/aws-compute-eks1_e5f6g7h8)
+
+---
+
+## EXTRA: Deleting nodes
+
+---
+
+---
