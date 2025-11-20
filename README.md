@@ -1,4 +1,4 @@
-# Launch a Kubernetes Cluster
+# Deploy a Backend with Docker | Kubernetes | ECR
 
 **Author:** Cody Chinothai  
 **Email:** cchinothai@gmail.com
