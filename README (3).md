@@ -1,8 +1,5 @@
-<img src="https://cdn.prod.website-files.com/677c400686e724409a5a7409/6790ad949cf622dc8dcd9fe4_nextwork-logo-leather.svg" alt="NextWork" width="300" />
-
 # Create Kubernetes Manifests
 
-**Project Link:** [View Project](http://learn.nextwork.org/projects/aws-compute-eks3)
 
 **Author:** Cody Chinothai  
 **Email:** cchinothai@gmail.com
@@ -18,6 +15,7 @@
 ## Introducing Today's Project!
 
 In this project, I will 
+
 🛫 Set up a Deployment manifest that tells Kubernetes how to deploy your backend.
 
 🚚 Set up a Service manifest that tells Kubernetes how to expose your backend to your users.
