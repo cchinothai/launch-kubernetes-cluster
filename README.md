@@ -9,15 +9,14 @@
 
 <img width="2552" height="1386" alt="image" src="https://github.com/user-attachments/assets/17ca4218-c814-4860-8da3-870c85be4129" />
 
-
-## Launch a Kubernetes Cluster
-
-![Image](http://learn.nextwork.org/enthusiastic_turquoise_radiant_monstera_deliciosa/uploads/aws-compute-eks1_e5f6g7h8)
-
 <img width="1627" height="781" alt="image" src="https://github.com/user-attachments/assets/ab35d4f3-ebd3-42bf-933a-1fe53e88e557" />
 
 <img width="1511" height="790" alt="image" src="https://github.com/user-attachments/assets/eaf63d2e-7376-48c1-83e9-a899827a2943" />
 
+
+## Launch a Kubernetes Cluster
+
+![Image](http://learn.nextwork.org/enthusiastic_turquoise_radiant_monstera_deliciosa/uploads/aws-compute-eks1_e5f6g7h8)
 
 ---
 
