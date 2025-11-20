@@ -5,6 +5,8 @@
 
 ---
 
+## Backend Repo: https://github.com/cchinothai/nextwork-flask-backend
+
 ## Launch a Kubernetes Cluster
 
 ![Image](http://learn.nextwork.org/enthusiastic_turquoise_radiant_monstera_deliciosa/uploads/aws-compute-eks1_e5f6g7h8)
