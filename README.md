@@ -29,17 +29,11 @@ Key Learnings
 4.  Access your cluster using an IAM access entry.
 5.  Test the resilience of our Kubernetes cluster.
 
-### What is Amazon EKS?
-
-### One thing I didn't expect
-
-### This project took me...
-
 ---
 
 ## What is Kubernetes?
 
-Kubernetes is a container orchestration platform that we can use to ensure our containerized applications are running and can dynamically scale based on traffic. 
+Kubernetes is a container orchestration platform that we can use to ensure our containerized applications are running and can dynamically scale based on traffic. We use Amazon EKS via eksctl to create a cluster with auto configurated networks and resources. 
 
 In this command: 
 $eksctl create cluster \
